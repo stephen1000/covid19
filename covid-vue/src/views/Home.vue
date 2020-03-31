@@ -7,7 +7,7 @@
     </v-row>
     <v-row>
       <v-col>
-        <div class="item second"><p>second</p></div>
+        <div class="item second"><p>second!</p></div>
       </v-col>
     </v-row>
     <v-row>
@@ -25,7 +25,6 @@ export default {
   name: "Home",
   data() {
     return {
-      covid_data: this.$store.state.covid_data,
       theme: "light"
     };
   },
@@ -37,6 +36,9 @@ export default {
       return this.countries.map(o => {
         return { text: o, value: o };
       });
+    },
+    covid_data() {
+      return this.$store.state.covid_data
     }
   }
 };

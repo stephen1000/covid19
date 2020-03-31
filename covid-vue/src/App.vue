@@ -20,17 +20,16 @@
 </template>
 
 <script>
-
 export default {
   name: "App",
   data() {
     return {
       covid_data: this.$store.state.covid_data,
-      theme: 'light'
-    }
+      theme: "light"
+    };
   },
   mounted() {
-    this.$store.dispatch('get_covid_data');
+    this.$store.dispatch("get_covid_data");
   }
 };
 </script>
