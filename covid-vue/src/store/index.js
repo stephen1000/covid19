@@ -19,8 +19,9 @@ export default new Vuex.Store({
       fetch(covid_url)
         .then(response => response.json())
         .then(data => {
-          console.log(data);
-          context.commit('set_covid_data', data)
+          data['United States'] = data['US'];
+          delete data['US']
+          context.commit('set_covid_data', data);
         });
     }
   },
