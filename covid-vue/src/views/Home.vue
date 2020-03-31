@@ -1,18 +1,45 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-container class="home">
+    <v-row>
+      <v-col>
+        <div class="item first"><p>first</p></div>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <div class="item second"><p>second</p></div>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <div class="item third">
+          <v-autocomplete :items="country_options"></v-autocomplete>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "Home",
-  components: {
-    HelloWorld
+  data() {
+    return {
+      covid_data: this.$store.state.covid_data,
+      theme: "light"
+    };
+  },
+  computed: {
+    countries() {
+      return Object.keys(this.covid_data);
+    },
+    country_options() {
+      return this.countries.map(o => {
+        return { text: o, value: o };
+      });
+    }
   }
 };
 </script>
+
+<style lang="scss"></style>
