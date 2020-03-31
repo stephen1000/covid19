@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       covid_data: this.$store.state.covid_data,
-      theme: "light"
+      theme: "dark"
     };
   },
   mounted() {
