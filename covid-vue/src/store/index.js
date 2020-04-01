@@ -7,11 +7,17 @@ const covid_url = "https://pomber.github.io/covid19/timeseries.json";
 
 export default new Vuex.Store({
   state: {
-    covid_data: {}
+    covid_data: {},
+    selected_country: '',
+    selected_country_data: {}
   },
   mutations: {
     set_covid_data(state, payload) {
       state.covid_data = payload
+    },
+    select_country(state, payload) {
+      state.selected_country = payload.country;
+      state.selected_country_data = state.covid_data[payload.country];
     }
   },
   actions: {
