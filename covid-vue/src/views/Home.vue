@@ -2,22 +2,15 @@
   <v-container class="home">
     <v-row>
       <v-col>
-        <div class="item first">
-          <p>first</p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <div class="item second">
-          <p>second!</p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <div class="item third">
+        <div class="item">
           <CountrySelector />
+        </div>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <div class="item">
+          <CountryLatestTable />
         </div>
       </v-col>
     </v-row>
@@ -26,11 +19,13 @@
 
 <script>
 import CountrySelector from "@/components/CountrySelector.vue";
+import CountryLatestTable from "@/components/CountryLatestTable.vue";
 
 export default {
   name: "Home",
   components: {
-    CountrySelector
+    CountrySelector,
+    CountryLatestTable,
   },
   data() {
     return {
