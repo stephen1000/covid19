@@ -9,13 +9,14 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "core-js": "^3.6.4",
-    "d3": "^5.15.0",
+    "core-js": "^3.6.5",
+    "d3": "^5.16.0",
     "lodash": "^4.17.15",
+    "mathjs": "^7.0.0",
     "vue": "^2.6.11",
-    "vue-router": "^3.1.5",
-    "vuetify": "^2.2.11",
-    "vuex": "^3.1.2"
+    "vue-router": "^3.2.0",
+    "vuetify": "^2.2.29",
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.0",
@@ -29,7 +30,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.1.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.2",
@@ -43,7 +44,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/recommended",
+      "plugin:vue/essential",
       "eslint:recommended",
       "@vue/prettier"
     ],
